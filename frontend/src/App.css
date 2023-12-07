@@ -1,0 +1,358 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server */
+    /* @font-face {                
+      font-family: 'Playfair Display', sans_serif;
+      src: url('Oswald.woff2') format('woff2'); 
+    } */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+    
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+    --brandy: #D9B589;
+    --brown-pod: #401E01;
+    --old-copper: #734F2F;
+    --barley-corn: #d2bfae;
+    --mandys-pink: #F2D2B6;
+    --soft-amber: #d4c5b8;
+    --astronaut: #2f3773;
+    --waikawa-gray: #555c8c;
+    --blue-haze: #b8bcd4;
+    --stratos: #010c40;
+    --sherwood-green: #014036;
+    --tolopea: #1b0140;
+    --mystic: #DCDEEA;
+    --blood: #a62d1f;
+    --mountain-meadow: #1fa657;
+
+
+
+    
+    --custom-embellishment-name:;
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-image: url(images/woodgrain_door.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--stratos);
+    font-family: 'Playfair Display', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    margin: 0px;
+    
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+   
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    text-align: center;
+    border-style: double;
+    background-color: var(--soft-amber);
+    color: var(--brown-pod);
+    
+  }
+  main {
+    color: var(--stratos);
+    margin: 8px
+  }
+  section {}
+    article {}
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {
+    background-color: var(--soft-amber);
+    border-style: double;
+    color: var(--brown-pod);
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align: center;
+    font-size: large;
+    border-style: solid;
+    background-color: var(--blue-haze);
+    display: flex;
+    flex-wrap: row wrap;
+  
+  }
+  nav a {
+    font-size: large;
+    text-decoration:none;
+    padding: 0 15px;
+    border-right: 2px solid var(--stratos);
+    display: inline-block;
+    flex-wrap: row wrap;
+    
+  }
+
+  nav a:last-child {
+    border-right: 0;
+  }
+
+  nav a:hover {
+    font-size: large;
+    text-decoration:none;
+  }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family: 'Playfair Display SC', serif;} 
+  h1 {
+  }
+  h2 {
+    text-align: center;
+  }
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    background-color: var(--barley-corn);
+    border-color: var(--old-copper);
+    border: 2px;
+    border-width: 2px;
+    padding: 8px;
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid var(--tolopea);
+    padding: 2px;
+  }
+  caption {}
+  thead {}
+  tbody {}
+  tfoot {}
+  tr {}
+    tr:nth-child(even) {
+      background-color: var(--blue-haze);
+    }
+    tr:nth-child(odd) {
+      background-color: var(--soft-amber);
+    }
+  th {
+    font-size: medium;
+    color: var(--sherwood-green);
+  }
+  td {
+    color: var(--brown-pod);
+    font-style: oblique;
+  }
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {}
+  fieldset {}
+    legend {
+      color: var(--brown-pod);
+      font-family: 'Playfair Display SC', sans-serif;
+      font-weight: 600;
+    }
+  label {
+    font-weight: 500;
+    display: block;
+    margin-top: 2px;
+  }
+
+  input, button, textarea, select {
+    font-size: 100%;
+    padding: 0.5%;
+    font-family: inherit;
+  }
+
+    button {
+      background-color: var(--sherwood-green);
+      color: var(--soft-amber);
+
+    }
+    input {
+      color: var(--tolopea);
+      background-color: var(--mystic);
+    }
+
+    input:required:focus {
+      border: 2px;
+      background-color: var(--barley-corn);
+    }
+
+    label.required:focus:after {
+      background-color: #9ee8be;
+    }
+
+    label.required:after {
+      content:" *";
+      color: var(--blood);
+    }
+
+    input::placeholder {
+      color: var(--sherwood-green);
+      font-weight: 600;
+    }
+
+    input:invalid {
+      border: 3px solid var(--blood);
+    }
+
+    input:valid {
+      border: 2px solid var(--mountain-meadow);
+    }
+
+    output {}
+    meter {}
+    progress {}
+    select {
+      color: var(--tolopea);
+      background-color: var(--mystic);
+      margin-top: 12px
+    }
+      optgroup {}
+      option {}
+
+    select:focus {
+      background-color: var(--barley-corn);
+    }
+    textarea {
+      color: var(--tolopea);
+      background-color: var(--mystic);
+      margin-top: 12px
+    }
+
+    textarea:focus {
+      background-color: var(--barley-corn);
+    }
+
+    textarea::placeholder {
+      color: var(--sherwood-green);
+      font-weight: 600;
+    }
+
+    
+  /* ----- Media ----- */
+  figure {
+    flex-flow: column;
+  }
+  img {
+    border: 3px solid var(--waikawa-gray)
+  }
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .articles {
+    border-style: groove;
+  }
+
+  .gallery {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+  .caption {}
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
